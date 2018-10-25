@@ -171,15 +171,15 @@ public class Encrypt extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 try{
                     if(jfc.showOpenDialog(Encrypt.this) == JFileChooser.APPROVE_OPTION){
-                        jtaL.setText(" ");    //清空檔案
+                        jtaL.setText(" ");
                         String str=" ";
-                        File selectFile=jfc.getSelectedFile();            //選擋
-                        FileReader fr=new FileReader(selectFile);         //讀檔
-                        BufferedReader br=new BufferedReader(fr);         //緩衝
+                        File selectFile=jfc.getSelectedFile();
+                        FileReader fr=new FileReader(selectFile);
+                        BufferedReader br=new BufferedReader(fr);
                         while ((str = br.readLine()) != null){
                             jtaL.append(str);
                         }
-                        fr.close();                                       //關閉檔案
+                        fr.close();
                     }
                 } catch (FileNotFoundException e1) {
                     JOptionPane.showMessageDialog(Encrypt.this,"file not true");
